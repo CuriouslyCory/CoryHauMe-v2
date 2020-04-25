@@ -1,6 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
-import styled from "styled-components"
+import { Container, Navbar } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import mainScss from '../styles/main.scss'
+import githubLogo from '../../content/assets/GitHub-Mark-Light-64px.png'
 
 import { rhythm, scale } from "../utils/typography"
 
@@ -54,35 +57,29 @@ class Layout extends React.Component {
       )
     }
     return (
-      <Wrapper>
-        <div
-          style={{
-            marginLeft: `auto`,
-            marginRight: `auto`,
-            maxWidth: rhythm(24),
-            padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-          }}
-        >
+      <Container className={mainScss.wrapper}>
+        <Navbar bg="dark" variant="dark" fixed="top">
+          <Navbar.Brand href="/" >
+            Cory Sougstad
+          </Navbar.Brand>
+          <Navbar className="ml-auto">
+            <a href="https://www.github.com/CuriouslyCory/CoryHauMe-V2">
+              <img src={githubLogo} alt="view this site on github" className="ghlogo"/>
+            </a>
+          </Navbar>
+        </Navbar>
+        <Container>
           <header>{header}</header>
           <main>{children}</main>
-        </div>
-        <Footer>
+        </Container>
+        <Container className={mainScss.footer}>
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </Footer>
-      </Wrapper>
+        </Container>
+      </Container>
     )
   }
 }
-
-const Wrapper = styled.div`
-  min-height: 100vh;
-`
-
-const Footer = styled.footer`
-  text-align: center;
-  margin: 24px;
-`
 
 export default Layout
