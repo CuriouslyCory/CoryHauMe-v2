@@ -21,7 +21,7 @@ class IndexPage extends React.Component {
           title="Cory Sougstad - Web Applciation Engineer"
           keywords={[`web developer`, `gatsby`, `javascript`, `react`]}
         />
-        <Container fluid className={indexScss.codeBackground}>
+        <Container fluid className="codeBackground justify-content-md-center">
           <Img fixed={data.perspectiveCodeImg.childImageSharp.fixed} className="rounded-circle"/>
         </Container>
         <h3>Profesional Web Development Since 2005</h3>
