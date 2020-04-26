@@ -8,6 +8,7 @@ import Img from 'gatsby-image'
 import { graphql } from 'gatsby';
 
 import indexScss from '../styles/index.scss';
+import githubLogo from '../../content/assets/GitHub-Mark-Light-64px.png'
 
 class IndexPage extends React.Component {
   render() {
@@ -34,12 +35,23 @@ class IndexPage extends React.Component {
           <Row>
             <Col md>
               <h3>About Me</h3>
-              <div className="bio">
-                <p>
-                  Currently a Lead Systems Engineer at Insight Enterprises Inc building rich user experiences. I am a developer, content creator, maker, and general creative enthusiast. 
-                  Formerly the IT Manager at Responsive Data where I really cut my teeth on full stack, top to bottom, front to back, development. 
-                </p>
-              </div>
+              <Container className="bio">
+                <Row>
+                  <Col>
+                    <p>
+                      Currently a Lead Systems Engineer at Insight Enterprises Inc building rich user experiences. I am a developer, content creator, maker, and general creative enthusiast. 
+                      Formerly the IT Manager at Responsive Data where I really cut my teeth on full stack, top to bottom, front to back, development. 
+                    </p>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col className="d-flex justify-content-end">
+                    <a href="https://www.github.com/CuriouslyCory/CoryHauMe-V2">
+                      <img src={githubLogo} alt="view this site on github" className="sm-gh-logo"/>
+                    </a>
+                  </Col>
+                </Row>
+              </Container>
             </Col>
             <Col md></Col>
           </Row>
