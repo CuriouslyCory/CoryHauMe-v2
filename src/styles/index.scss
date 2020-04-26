@@ -17,7 +17,7 @@
 
 }
 
-.bottom-content {
+.middle-content {
 	background-image: url('../../content/assets/Sunset.jpg');
 	background-size: cover;
 	background-position: center;
@@ -38,4 +38,18 @@
 
 .alpha-gray {
 	background-color: rgba(200, 200, 200, 0.6);
+}
+
+.bottom-content {
+	background-image: url('../../content/assets/cactus.jpg');
+	background-size: cover;
+	background-position: center;
+	padding: 25px;
+	min-height: 400px; 
+
+
+	.contact-form {
+		background-color: rgba(0, 0, 0, 0.6);
+		padding: 25px;
+	}
 }

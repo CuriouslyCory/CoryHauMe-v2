@@ -31,7 +31,7 @@ class IndexPage extends React.Component {
             <p>Profesional Web Development Since 2005</p>
           </Row>
         </Container>
-        <Container fluid className="bottom-content">
+        <Container fluid className="middle-content">
           <Row>
             <Col md>
               <h3>About Me</h3>
@@ -54,6 +54,30 @@ class IndexPage extends React.Component {
               </Container>
             </Col>
             <Col md></Col>
+          </Row>
+        </Container>
+        <Container fluid className="bottom-content">
+          <Row>
+            <Col md></Col>
+            <Col md>
+              <h3>Drop me a line</h3>
+              <Container className="contact-form">
+                <form name="contact" method="POST" data-netlify="true">
+                  <p>
+                    <label>Your Name: <input type="text" name="name" /></label>   
+                  </p>
+                  <p>
+                    <label>Your Email: <input type="email" name="email" /></label>
+                  </p>
+                  <p>
+                    <label>Message: <textarea name="message"></textarea></label>
+                  </p>
+                  <p>
+                    <button type="submit">Send</button>
+                  </p>
+                </form>
+              </Container>
+            </Col>
           </Row>
         </Container>
       </Layout>
