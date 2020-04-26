@@ -1,10 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Button from "../components/button"
-import { Container } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 
 import Img from 'gatsby-image'
 import { graphql } from 'gatsby';
@@ -21,18 +19,31 @@ class IndexPage extends React.Component {
           title="Cory Sougstad - Web Applciation Engineer"
           keywords={[`web developer`, `gatsby`, `javascript`, `react`]}
         />
-        <Container fluid className="codeBackground justify-content-md-center">
-          <Img fixed={data.perspectiveCodeImg.childImageSharp.fixed} className="rounded-circle"/>
+        <Container fluid className="code-background">
+          <Row className="justify-content-center"><h2>&lt; Web App Engineer &gt;</h2></Row>
+          <Row className="align-items-center">
+            <Col className="p-3">
+              <Img fixed={data.perspectiveCodeImg.childImageSharp.fixed} className="rounded-circle profile-pic mx-auto d-block"/>
+            </Col>
+          </Row>
+          <Row className="justify-content-center">
+            <p>Profesional Web Development Since 2005</p>
+          </Row>
         </Container>
-        <h3>Profesional Web Development Since 2005</h3>
-        <p>
-          This starter comes out of the box with styled components and Gatsby's
-          default starter blog running on Netlify CMS.
-        </p>
-        <p>Now go build something great!</p>
-        <Link to="/blog/">
-          <Button marginTop="35px">Go to Blog</Button>
-        </Link>
+        <Container fluid className="bottom-content">
+          <Row>
+            <Col md>
+              <h3>About Me</h3>
+              <div className="bio">
+                <p>
+                  Currently a Lead Systems Engineer at Insight Enterprises Inc building rich user experiences. I am a developer, content creator, maker, and general creative enthusiast. 
+                  Formerly the IT Manager at Responsive Data where I really cut my teeth on full stack, top to bottom, front to back, development. 
+                </p>
+              </div>
+            </Col>
+            <Col md></Col>
+          </Row>
+        </Container>
       </Layout>
     )
   }

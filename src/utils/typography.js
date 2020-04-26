@@ -1,6 +1,9 @@
 import Typography from "typography"
 import SternGrove from "typography-theme-stern-grove"
 
+SternGrove.bodyColor = "#dfdad7";
+SternGrove.headerColor = "#dfdad7";
+
 const typography = new Typography(SternGrove)
 
 // Hot reload typography in development.

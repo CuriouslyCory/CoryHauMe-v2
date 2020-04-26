@@ -1,6 +1,43 @@
-.codeBackground {
-	background-image: url('../../content/assets/CodeSS.webp');
-	width: 100%;
+.code-background {
+	background-image: url('../../content/assets/code-block-darkmode.jpg');
 	background-size: cover;
-	position: relative;
+	min-height: 250px;
+	padding: 25px;
+
+	h2 {
+		color: #dfdad7;
+		background-color: rgba(0, 0, 0, 0.4);
+		padding: 4px 7px 4px 7px;
+	}
+	p {
+		font-weight: bold;
+		background-color: rgba(0, 0, 0, 0.4);
+		padding: 4px 7px 4px 7px;
+	}
+
+}
+
+.bottom-content {
+	background-image: url('../../content/assets/Sunset.jpg');
+	background-size: cover;
+	background-position: center;
+	padding: 25px;
+	min-height: 400px; 
+
+	.bio {
+		background-color: rgba(0, 0, 0, 0.6);
+		border-left: 1px solid #b26232;
+
+		p {
+			padding: 25px;
+		}
+	}
+}
+
+.profile-pic {
+	border: 1px solid #FFF;
+}
+
+.alpha-gray {
+	background-color: rgba(200, 200, 200, 0.6);
 }

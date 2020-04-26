@@ -16,24 +16,7 @@ class Layout extends React.Component {
 
     if (location.pathname === rootPath || location.pathname === blogPath) {
       header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={location.pathname === blogPath ? `/blog/` : `/`}
-          >
-            {title}
-          </Link>
-        </h1>
+        <div></div>
       )
     } else {
       header = (
@@ -57,7 +40,7 @@ class Layout extends React.Component {
       )
     }
     return (
-      <Container className={mainScss.wrapper}>
+      <Container className="wrapper" fluid>
         <Navbar bg="dark" variant="dark" fixed="top">
           <Navbar.Brand href="/" >
             Cory Sougstad
@@ -68,11 +51,11 @@ class Layout extends React.Component {
             </a>
           </Navbar>
         </Navbar>
-        <Container>
+        <Container className="p-0" fluid>
           <header>{header}</header>
           <main>{children}</main>
         </Container>
-        <Container className={mainScss.footer}>
+        <Container className="footer">
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
