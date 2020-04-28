@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 class Projects extends React.Component {
   render() {
     const siteTitle = "< Web App Engineer >"
-    const { data }  = this.props;
+    //const { data }  = this.props;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>

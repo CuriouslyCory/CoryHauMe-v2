@@ -7,15 +7,14 @@ import { Col, Container, Row } from 'react-bootstrap';
 import Img from 'gatsby-image'
 import { graphql } from 'gatsby';
 
-import indexScss from '../styles/index.scss';
-import githubLogo from '../../content/assets/GitHub-Mark-Light-64px.png'
+import '../styles/index.scss';
+import GithubButton from '../components/github-button';
 
 class IndexPage extends React.Component {
   render() {
-    const siteTitle = "< Web App Engineer >"
     const { data }  = this.props;
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout>
         <SEO
           title="Cory Sougstad - Web Applciation Engineer"
           keywords={[`web developer`, `gatsby`, `javascript`, `react`]}
@@ -46,9 +45,8 @@ class IndexPage extends React.Component {
                 </Row>
                 <Row>
                   <Col className="d-flex justify-content-end">
-                    <a href="https://www.github.com/CuriouslyCory/CoryHauMe-V2">
-                      <img src={githubLogo} alt="view this site on github" className="sm-gh-logo"/>
-                    </a>
+                    <GithubButton repoName="CoryHauMe-V2"></GithubButton>
+                    
                   </Col>
                 </Row>
               </Container>

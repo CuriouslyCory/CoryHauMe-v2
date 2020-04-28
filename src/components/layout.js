@@ -1,44 +1,17 @@
 import React from "react"
-import { Link } from "gatsby"
 import { Container, Nav, Navbar } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import mainScss from '../styles/main.scss'
-import githubLogo from '../../content/assets/GitHub-Mark-Light-64px.png'
 
-import { rhythm, scale } from "../utils/typography"
+import '../styles/layout.scss';
 
 class Layout extends React.Component {
   render() {
-    const { location, title, children } = this.props
-    const rootPath = `${__PATH_PREFIX__}/`
-    const blogPath = `${__PATH_PREFIX__}/blog/`
-    let header
+    const { children } = this.props
 
-    if (location.pathname === rootPath || location.pathname === blogPath) {
-      header = (
-        <div></div>
-      )
-    } else {
-      header = (
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/blog/`}
-          >
-            {title}
-          </Link>
-        </h3>
-      )
-    }
+    let header
+    header = (
+      <div></div>
+    )
+
     return (
       <Container className="wrapper" fluid>
         <Navbar bg="dark" variant="dark" fixed="top">
