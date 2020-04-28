@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { Container, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import mainScss from '../styles/main.scss'
 import githubLogo from '../../content/assets/GitHub-Mark-Light-64px.png'
@@ -45,20 +45,21 @@ class Layout extends React.Component {
           <Navbar.Brand href="/" >
             Cory Sougstad
           </Navbar.Brand>
-          <Navbar className="ml-auto">
-            <a href="https://www.github.com/CuriouslyCory/CoryHauMe-V2">
-              <img src={githubLogo} alt="view this site on github" className="ghlogo"/>
-            </a>
-          </Navbar>
+          <Nav className="md-auto ml-auto">
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/projects">Projects</Nav.Link>
+            <Nav.Link href="/history">History</Nav.Link>
+          </Nav>
         </Navbar>
         <Container className="p-0" fluid>
           <header>{header}</header>
           <main>{children}</main>
         </Container>
         <Container className="footer">
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          © {new Date().getFullYear()}, Cory Sougstad |&nbsp;
+            <a href="https://www.github.com/CuriouslyCory/CoryHauMe-V2">
+              View this site on GitHub
+            </a>
         </Container>
       </Container>
     )

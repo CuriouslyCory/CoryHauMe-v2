@@ -24,7 +24,7 @@ class IndexPage extends React.Component {
           <Row className="justify-content-center"><h2>&lt; Web App Engineer &gt;</h2></Row>
           <Row className="align-items-center">
             <Col className="p-3">
-              <Img fixed={data.perspectiveCodeImg.childImageSharp.fixed} className="rounded-circle profile-pic mx-auto d-block"/>
+              <Img fixed={data.perspectiveCodeImg.childImageSharp.fixed} alt="Cory Sougstad" className="rounded-circle profile-pic mx-auto d-block"/>
             </Col>
           </Row>
           <Row className="justify-content-center">
@@ -39,8 +39,8 @@ class IndexPage extends React.Component {
                 <Row>
                   <Col>
                     <p>
-                      Currently a Lead Systems Engineer at Insight Enterprises Inc building rich user experiences. I am a developer, content creator, maker, and general creative enthusiast. 
-                      Formerly the IT Manager at Responsive Data where I really cut my teeth on full stack, top to bottom, front to back, development. 
+                      Currently a Lead Systems Engineer at Insight Enterprises Inc building rich user experiences in ServiceNow. I am a developer, content creator, maker, and general creative enthusiast. 
+                      Formerly the IT Manager at Responsive Data where I really spent 8 years practicing full stack, top to bottom, front to back, development. 
                     </p>
                   </Col>
                 </Row>
