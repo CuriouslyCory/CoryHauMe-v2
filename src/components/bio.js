@@ -1,74 +1,38 @@
 /**
- * Bio component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
+ * Reusable bio block
  */
 
-import React from "react"
-import { StaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
-import styled from "styled-components"
-
-import { rhythm } from "../utils/typography"
+import React from 'react';
+import GithubButton from '../components/github-button';
+import { Col, Container, Row } from "react-bootstrap";
+import '../styles/bio.scss';
 
 function Bio() {
+  const yearsDev = new Date().getFullYear() - 2005;
   return (
-    <StaticQuery
-      query={bioQuery}
-      render={data => {
-        const { author, social } = data.site.siteMetadata
-        return (
-          <Container>
-            <Image
-              fixed={data.avatar.childImageSharp.fixed}
-              alt={author}
-              style={{
-                marginRight: rhythm(1 / 2),
-                marginBottom: 0,
-                minWidth: 50,
-                borderRadius: `100%`,
-              }}
-              imgStyle={{
-                borderRadius: `50%`,
-              }}
-            />
+    <Container>
+      <h3>&lt;About Me&gt;</h3>
+      <Container className="bio">
+        <Row>
+          <Col>
             <p>
-              Written by <strong>{author}</strong> who lives and works in Arizona building useful things.
-              {` `}
-              <a href={`https://twitter.com/${social.twitter}`}>
-                You should follow me on Twitter
-              </a>
+              Currently a Lead Systems Engineer at Insight Enterprises Inc building rich user experiences in ServiceNow. 
+              Having spent the last {yearsDev} years as a full time full stack developer I've had the chance to work on a wide selection of projects, problems, and systems. 
+              From UI/UX to AI and Deep learning, I have a toolbox of skills at ready to solve any development need.
             </p>
-          </Container>
-        )
-      }}
-    />
+            <p>
+              I am a developer, content creator, maker, and general creative enthusiast. <span class="make-stuff">I like to make stuff.</span>
+            </p>
+          </Col>
+        </Row>
+        <Row>
+          <Col className="d-flex justify-content-end">
+            <GithubButton repoName="CoryHauMe-V2"></GithubButton>
+          </Col>
+        </Row>
+      </Container>
+    </Container>
   )
 }
-
-const bioQuery = graphql`
-  query BioQuery {
-    avatar: file(absolutePath: { regex: "/MyFace2.webp/" }) {
-      childImageSharp {
-        fixed(width: 50, height: 50) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    site {
-      siteMetadata {
-        author
-        social {
-          twitter
-        }
-      }
-    }
-  }
-`
-
-const Container = styled.div`
-  display: flex;
-`
 
 export default Bio
