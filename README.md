@@ -2,7 +2,7 @@
   My Personal Developer Website
 </h1>
 
-<img alt="screesnhot" src="./content/assets/MyFace2.webp">
+<img alt="screesnhot" src="./content/assets/MyFace2.webp" style="max-height: 150px;">
 
 This is my personal developer website.
 
