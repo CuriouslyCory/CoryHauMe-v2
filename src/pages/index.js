@@ -33,7 +33,7 @@ class IndexPage extends React.Component {
         <Container fluid className="middle-content">
           <Row>
             <Col md>
-              <h3>About Me</h3>
+              <h3>&lt;About Me&gt;</h3>
               <Container className="bio">
                 <Row>
                   <Col>
