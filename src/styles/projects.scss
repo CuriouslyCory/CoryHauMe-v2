@@ -2,3 +2,24 @@
     background-color: #111;
     width: 30rem;
 }
+
+.page-section {
+	min-height: 500px;
+}
+
+.code-background {
+	background-image: url('../../content/assets/code-block-darkmode-blur.jpg');
+	background-position: center;
+	background-size: cover;
+	padding: 25px;
+
+	h2 {
+		color: #dfdad7;
+		padding: 4px 7px 4px 7px;
+	}
+	p {
+		font-weight: bold;
+		padding: 4px 7px 4px 7px;
+	}
+
+}
