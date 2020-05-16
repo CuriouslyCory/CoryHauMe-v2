@@ -41,7 +41,7 @@ module.exports = {
         theme_color: `#dfdad7`,
         display: `minimal-ui`,
         // edit below
-        icon: `content/assets/favicon.ico`,
+        icon: `content/assets/favicon.png`,
       },
     },
   ],
