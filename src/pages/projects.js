@@ -21,7 +21,6 @@ class Projects extends React.Component {
             <Col>
               <Card className="m-3 p-3" variant="projects">
                 <Card.Title>Product Watcher</Card.Title>
-                <Img fluid={data.nodeLogoImg.childImageSharp.fluid} />
                 <Card.Body>
                   A NodeJS based script that can be configured to scrape a webpage, 
                   peek at an element, and determine if a product is in stock or out of stock. 
@@ -43,17 +42,3 @@ class Projects extends React.Component {
 }
 
 export default Projects
-
-export const query = graphql`
-  query {
-    nodeLogoImg: file(relativePath: { eq: "node-logo-dark.png" }) {
-      childImageSharp {
-        # Specify the image processing specifications right in the query.
-        # Makes it trivial to update as your page's design changes.
-        fluid(maxWidth: 200) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`
