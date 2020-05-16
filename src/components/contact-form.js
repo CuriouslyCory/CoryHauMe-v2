@@ -1,11 +1,12 @@
 import React from 'react';
 import {Button, Container, FormControl, InputGroup, Row, Col } from 'react-bootstrap';
+import '../styles/contact-form.scss';
 
 function ContactForm() {
 
     return(
         <Container className="contact-form">
-            <InputGroup className="mb-3">
+            <InputGroup className="mb-3" variant="test">
                 <InputGroup.Prepend>
                     <InputGroup.Text>Your Name</InputGroup.Text>
                 </InputGroup.Prepend> 
@@ -31,7 +32,7 @@ function ContactForm() {
                 </InputGroup.Prepend>
                 <FormControl as="textarea" aria-label="Message" />
             </InputGroup>
-            <Container >
+            <Container>
                 <Col>
                     <Row className="justify-content-end">
                         <Button className="mt-3" variant="primary">Send</Button>

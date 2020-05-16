@@ -1,5 +1,6 @@
 .code-background {
-	background-image: url('../../content/assets/code-block-darkmode-blur.jpg');
+	background-image: url('../../content/assets/Sunset.jpg');
+	background-position: center;
 	background-size: cover;
 	min-height: 250px;
 	padding: 25px;
@@ -18,7 +19,8 @@
 }
 
 .middle-content {
-	background-image: url('../../content/assets/Sunset.jpg');
+	background-image: url('../../content/assets/code-block-darkmode-blur.jpg');
+	
 	background-size: cover;
 	background-position: center;
 	padding: 25px;
@@ -26,7 +28,7 @@
 }
 
 .profile-pic {
-	border: 1px solid #FFF;
+	border: 0.1rem solid #dfdad7;
 }
 
 .alpha-gray {

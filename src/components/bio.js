@@ -21,7 +21,7 @@ function Bio() {
               From UI/UX to AI and Deep learning, I have a toolbox of skills at ready to solve any development need.
             </p>
             <p>
-              I am a developer, content creator, maker, and general creative enthusiast. <span class="make-stuff">I like to make stuff.</span>
+              I am a developer, content creator, maker, and general creative enthusiast. <span className="make-stuff">I like to make stuff.</span>
             </p>
           </Col>
         </Row>
