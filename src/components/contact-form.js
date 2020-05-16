@@ -6,7 +6,7 @@ function ContactForm() {
 
     return(
         <Container className="contact-form">
-            <InputGroup className="mb-3" variant="test">
+            <InputGroup className="mb-3">
                 <InputGroup.Prepend>
                     <InputGroup.Text>Your Name</InputGroup.Text>
                 </InputGroup.Prepend> 

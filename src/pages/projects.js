@@ -1,20 +1,59 @@
 import React from "react"
+import Img from "gatsby-image";
+import { graphql } from "gatsby";
+import { Card, Col, Container, Row } from "react-bootstrap";
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
+import '../styles/projects.scss';
 
 class Projects extends React.Component {
   render() {
-    const siteTitle = "< Web App Engineer >"
-    //const { data }  = this.props;
-
+    const { data }  = this.props;
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout>
         <SEO title="Projects" />
-        <h1>Projects</h1>
+        <Container fluid>
+          <Row >
+            <Col>
+              <h2>Projects</h2>
+            </Col>
+            <Col>
+              <Card className="m-3 p-3" variant="projects">
+                <Card.Title>Product Watcher</Card.Title>
+                <Img fluid={data.nodeLogoImg.childImageSharp.fluid} />
+                <Card.Body>
+                  A NodeJS based script that can be configured to scrape a webpage, 
+                  peek at an element, and determine if a product is in stock or out of stock. 
+                  Traditional screen scrapers use something like curl to pull and read through
+                  the static content delivered by a web server. Due to the prominant uptick in
+                  progressive web applcations which heavily utilize client side rendering, this 
+                  methodology will fail to find fully load many web pages anymore. In swoops
+                  puppeteer, which impliments a headless chromium instance to actually render
+                  a page the way a normal web client would see it. Notifications are sent out
+                  via sms through twilio or a ifttt webhook.
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
+        </Container>
       </Layout>
     )
   }
 }
 
 export default Projects
+
+export const query = graphql`
+  query {
+    nodeLogoImg: file(relativePath: { eq: "node-logo-dark.png" }) {
+      childImageSharp {
+        # Specify the image processing specifications right in the query.
+        # Makes it trivial to update as your page's design changes.
+        fluid(maxWidth: 200) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`

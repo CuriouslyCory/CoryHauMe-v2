@@ -1,14 +1,12 @@
 import React from 'react'
+import { Col, Container, Row } from "react-bootstrap";
+import Img from "gatsby-image";
+import { graphql } from "gatsby";
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Bio from '../components/bio';
 import ContactForm from '../components/contact-form';
-import { Col, Container, Row } from "react-bootstrap";
-
-import Img from "gatsby-image";
-import { graphql } from "gatsby";
-
 import "../styles/index.scss";
 
 
@@ -21,18 +19,18 @@ class IndexPage extends React.Component {
           title="Cory Sougstad - Web Applciation Engineer"
           keywords={[`web developer`, `gatsby`, `javascript`, `react`]}
         />
-        <Container fluid className="code-background">
-          <Row className="justify-content-center"><h2>&lt; Web App Engineer &gt;</h2></Row>
-          <Row className="align-items-center">
+        <Container fluid className="page-section code-background">
+          <Row className="justify-content-center mt-auto"><h2>&lt; Web App Engineer &gt;</h2></Row>
+          <Row className="align-items-center fluid">
             <Col className="p-3">
               <Img fixed={data.perspectiveCodeImg.childImageSharp.fixed} alt="Cory Sougstad" className="rounded-circle profile-pic mx-auto d-block"/>
             </Col>
           </Row>
-          <Row className="justify-content-center">
+          <Row className="justify-content-center mt-auto">
             <p>Profesional Web Development Since 2005</p>
           </Row>
         </Container>
-        <Container fluid className="middle-content">
+        <Container fluid className="page-section middle-content">
           <Row>
             <Col md>
               <Bio></Bio>
@@ -40,7 +38,7 @@ class IndexPage extends React.Component {
             <Col md></Col>
           </Row>
         </Container>
-        <Container fluid className="bottom-content">
+        <Container fluid className="page-section bottom-content">
           <Row>
             <Col md></Col>
             <Col md>

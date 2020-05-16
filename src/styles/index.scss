@@ -1,18 +1,19 @@
+.page-section {
+	min-height: 500px;
+}
+
 .code-background {
 	background-image: url('../../content/assets/Sunset.jpg');
 	background-position: center;
 	background-size: cover;
-	min-height: 250px;
 	padding: 25px;
 
 	h2 {
 		color: #dfdad7;
-		background-color: rgba(0, 0, 0, 0.4);
 		padding: 4px 7px 4px 7px;
 	}
 	p {
 		font-weight: bold;
-		background-color: rgba(0, 0, 0, 0.4);
 		padding: 4px 7px 4px 7px;
 	}
 
@@ -24,7 +25,6 @@
 	background-size: cover;
 	background-position: center;
 	padding: 25px;
-	min-height: 400px; 
 }
 
 .profile-pic {
@@ -40,8 +40,6 @@
 	background-size: cover;
 	background-position: center;
 	padding: 25px;
-	min-height: 400px; 
-
 
 	.contact-form {
 		background-color: rgba(0, 0, 0, 0.6);
