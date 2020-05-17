@@ -2,8 +2,7 @@ import React from "react"
 import { Container, Nav, Navbar } from 'react-bootstrap';
 
 import '../styles/layout.scss';
-import {  graphql } from "gatsby"
-//<Img fixed={data.imageSharp.fixed} />
+
 class Layout extends React.Component {
   render() {
     console.log(this.props);
@@ -36,13 +35,3 @@ class Layout extends React.Component {
 }
 
 export default Layout
-
-export const query = graphql`
-  {
-    imageSharp(id: {eq: "4bc5143d-2955-574d-921c-286e8b65851a"}) {
-      fixed(height: 150, width: 150) {
-        ...GatsbyImageSharpFixed
-      }
-    }
-  }
-`
