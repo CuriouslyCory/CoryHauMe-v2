@@ -55,7 +55,7 @@ class IndexPage extends React.Component {
 export default IndexPage
 export const query = graphql`
   query{
-    imageSharp(id: {eq: "73c8c1bd-f758-5511-b2df-dc13ce47a4ca"}) {
+    imageSharp(fixed: {originalName: {eq: "MyFace2.webp"}}) {
       fixed(height: 150, width: 150) {
         ...GatsbyImageSharpFixed
       }
