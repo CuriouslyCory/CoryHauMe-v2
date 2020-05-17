@@ -16,7 +16,7 @@ function Bio() {
         <Row>
           <Col>
             <p>
-              Currently a Lead Systems Engineer at Insight Enterprises Inc building rich user experiences in ServiceNow. 
+              Currently a Lead Systems Engineer at Insight Enterprises Inc. building rich user experiences in ServiceNow. 
               Having spent the last {yearsDev} years as a full time full stack developer I've had the chance to work on a wide selection of projects, problems, and systems. 
               From UI/UX to AI and Deep learning, I have a toolbox of skills at ready to solve any development need.
             </p>

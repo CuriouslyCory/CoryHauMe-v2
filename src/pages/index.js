@@ -19,11 +19,11 @@ class IndexPage extends React.Component {
           title="Cory Sougstad - Web Applciation Engineer"
           keywords={[`web developer`, `gatsby`, `javascript`, `react`]}
         />
-        <Container fluid className="page-section code-background">
+        <Container fluid className="page-section top-content">
           <Row className="justify-content-center mt-auto"><h2>&lt; Web App Engineer &gt;</h2></Row>
           <Row className="align-items-center fluid">
             <Col className="p-3">
-              <Img fixed={data.perspectiveCodeImg.childImageSharp.fixed} alt="Cory Sougstad" className="rounded-circle profile-pic mx-auto d-block"/>
+              <Img fixed={data.imageSharp.fixed} alt="Cory Sougstad" className="rounded-circle profile-pic mx-auto d-block"/>
             </Col>
           </Row>
           <Row className="justify-content-center mt-auto">
@@ -54,14 +54,10 @@ class IndexPage extends React.Component {
 
 export default IndexPage
 export const query = graphql`
-  query {
-    perspectiveCodeImg: file(relativePath: { eq: "MyFace2.webp" }) {
-      childImageSharp {
-        # Specify the image processing specifications right in the query.
-        # Makes it trivial to update as your page's design changes.
-        fixed(height: 150, width: 150) {
-          ...GatsbyImageSharpFixed
-        }
+  query{
+    imageSharp(id: {eq: "73c8c1bd-f758-5511-b2df-dc13ce47a4ca"}) {
+      fixed(height: 150, width: 150) {
+        ...GatsbyImageSharpFixed
       }
     }
   }

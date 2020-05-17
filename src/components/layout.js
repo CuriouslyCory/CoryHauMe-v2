@@ -2,15 +2,12 @@ import React from "react"
 import { Container, Nav, Navbar } from 'react-bootstrap';
 
 import '../styles/layout.scss';
-
+import {  graphql } from "gatsby"
+//<Img fixed={data.imageSharp.fixed} />
 class Layout extends React.Component {
   render() {
+    console.log(this.props);
     const { children } = this.props
-
-    let header
-    header = (
-      <div></div>
-    )
 
     return (
       <Container className="wrapper" fluid>
@@ -25,7 +22,6 @@ class Layout extends React.Component {
           </Nav>
         </Navbar>
         <Container className="p-0" fluid>
-          <header>{header}</header>
           <main>{children}</main>
         </Container>
         <Container className="footer">
@@ -40,3 +36,13 @@ class Layout extends React.Component {
 }
 
 export default Layout
+
+export const query = graphql`
+  {
+    imageSharp(id: {eq: "4bc5143d-2955-574d-921c-286e8b65851a"}) {
+      fixed(height: 150, width: 150) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
+`
